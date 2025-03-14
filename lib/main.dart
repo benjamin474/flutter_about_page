@@ -62,12 +62,13 @@ class AboutPage extends StatelessWidget {
                     child: Icon(
                       Icons.favorite,
                       color: Colors.yellow,
-                      size: 24.0
+                      size: 24.0,
                     ),
                   ),
-                ]
+                ],
               ),
 
+             
               NameWidget(),
               ActHistory(),
               PopularAlbums(),
