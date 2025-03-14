@@ -20,6 +20,18 @@ class NameWidget extends StatelessWidget{
           ),
         ),
         const SizedBox(height: 30.0),
+        const Text('Instagram', style: TextStyle(color: Colors.grey,letterSpacing: 2.0)),
+        const SizedBox(height: 10.0),
+        Text(
+          '@alicekochiayen',
+          
+          style: TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.bold,
+            fontSize: 28.0,
+            letterSpacing: 2.0,
+          ),
+        ),
       ],
     );
   }

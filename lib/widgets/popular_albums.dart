@@ -8,22 +8,24 @@ class PopularAlbums extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     final albums = <Album>[
-      const Album(title: '小資女孩向前衝', cover: '../..assets/officegirls.png'),
-      const Album(title: '必娶女人', cover: '../..assets/marrymeornot.png'),
-      const Album(title: '想見妳', cover:'../..assets/somedayoroneday.png'),
-      const Album(title: '模仿犯', cover: '../..assets/copycatkiller.png'),
-      const Album(title: '童話故事下集', cover: '../..assets/marrybut.png'),
+      const Album(title: '小資女孩向前衝', cover: '../../assets/officegirls.png'),
+      const Album(title: '必娶女人', cover: '../../assets/marrymeornot.png'),
+      const Album(title: '想見你', cover:'../../assets/somedayoneday.png'),
+      const Album(title: '模仿犯', cover: '../../assets/copycatkiller.png'),
+      const Album(title: '童話故事下集', cover: '../../assets/marrybut.png'),
     ];
 
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        const Text('熱門作品', style: TextStyle(fontSize: 20)),
+        const Text('熱門出演作品', style: TextStyle(color: Colors.grey, letterSpacing: 2.0)),
         const SizedBox(height: 10),
         SizedBox(
-          height: 200,
+          height: 400,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
+            shrinkWrap: true,
+            // phy
             itemCount: albums.length,
             itemBuilder: (context, index) {
               final album = albums[index];
@@ -31,7 +33,7 @@ class PopularAlbums extends StatelessWidget{
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
                 child: Column(
                   children: [
-                    Image.asset(album.cover, width: 150,height: 150, fit: BoxFit.cover),
+                    Image.asset(album.cover, height: 200, fit: BoxFit.cover),
                     const SizedBox(height: 5),
                       Text(album.title, style: const TextStyle(fontSize: 16),
                     ),
@@ -42,11 +44,13 @@ class PopularAlbums extends StatelessWidget{
             }
           )
         ),
-        for(var album in albums)
-          ListTile(
-            leading: Image.asset(album.cover, width: 50),
-            title: Text(album.title),
-          ),
+
+
+        // for(var album in albums)
+        //   ListTile(
+        //     leading: Image.asset(album.cover, width: 50),
+        //     title: Text(album.title),
+        //   ),
         
       ],
     );

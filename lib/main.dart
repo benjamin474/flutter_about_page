@@ -36,23 +36,25 @@ class MyApp extends StatelessWidget {
 
 class AboutPage extends StatelessWidget {
   final String title;
-
   const AboutPage({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: AppBar(
         title: Text(title),
       ),
+
       body: SingleChildScrollView(
+        
         child: Column(
           children: const[
             ProfilePicture(),
             NameWidget(),
-            StoryWidget(),
             ActHistory(),
             PopularAlbums(),
+            StoryWidget(),
           ],
         ),
       ),
