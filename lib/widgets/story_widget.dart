@@ -11,13 +11,13 @@ class StoryWidget extends StatelessWidget {
       children: <Widget>[
         const Text(
           '出道史',
-          style: TextStyle(color: Colors.grey, letterSpacing: 2.0),
+          style: TextStyle(color: Colors.blueGrey, letterSpacing: 2.0),
         ),
         const SizedBox(height: 10.0),
         Container(
           // color: Colors.blue[300],
           decoration: BoxDecoration(
-            color: Colors.blue[300],
+            color: Color.fromRGBO(122, 130, 233, 0.498),
             border: Border.all(color: Colors.grey),
             borderRadius: BorderRadius.circular(8.0),
           ),

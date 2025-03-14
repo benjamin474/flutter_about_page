@@ -8,7 +8,7 @@ class NameWidget extends StatelessWidget{
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
-        const Text('姓名', style: TextStyle(color: Colors.grey, letterSpacing: 2.0)),
+        const Text('姓名', style: TextStyle(color: Colors.blueGrey, letterSpacing: 2.0)),
         const SizedBox(height: 10.0),
         Text(
           '柯佳嬿',
@@ -20,7 +20,7 @@ class NameWidget extends StatelessWidget{
           ),
         ),
         const SizedBox(height: 30.0),
-        const Text('Instagram', style: TextStyle(color: Colors.grey,letterSpacing: 2.0)),
+        const Text('Instagram', style: TextStyle(color: Colors.blueGrey,letterSpacing: 2.0)),
         const SizedBox(height: 10.0),
         Text(
           '@alicekochiayen',

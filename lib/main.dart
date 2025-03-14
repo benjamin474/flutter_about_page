@@ -6,8 +6,7 @@ import 'widgets/popular_albums.dart';
 import 'widgets/profile_picture.dart';
 import 'widgets/story_widget.dart';
 
-
-class Album{
+class Album {
   final String title;
   final String cover;
   const Album({required this.title, required this.cover});
@@ -41,21 +40,40 @@ class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text(title)),
 
-      appBar: AppBar(
-        title: Text(title),
-      ),
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('../assets/background.png'),
+            fit: BoxFit.cover,
+          ),
+        ),
 
-      body: SingleChildScrollView(
-        
-        child: Column(
-          children: const[
-            ProfilePicture(),
-            NameWidget(),
-            ActHistory(),
-            PopularAlbums(),
-            StoryWidget(),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: const [
+              Stack(
+                children: [
+                  const ProfilePicture(),
+                  Positioned(
+                    top: 0,
+                    right: 0,
+                    child: Icon(
+                      Icons.favorite,
+                      color: Colors.yellow,
+                      size: 24.0
+                    ),
+                  ),
+                ]
+              ),
+
+              NameWidget(),
+              ActHistory(),
+              PopularAlbums(),
+              StoryWidget(),
+            ],
+          ),
         ),
       ),
     );
