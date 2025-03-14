@@ -4,7 +4,7 @@ import 'widgets/act_history.dart';
 import 'widgets/name_widget.dart';
 import 'widgets/popular_albums.dart';
 import 'widgets/profile_picture.dart';
-
+import 'widgets/story_widget.dart';
 
 
 class Album{
@@ -14,7 +14,7 @@ class Album{
 }
 
 void main() {
-  runApp(const AboutPage(title:'關於柯佳嬿'));
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -50,6 +50,7 @@ class AboutPage extends StatelessWidget {
           children: const[
             ProfilePicture(),
             NameWidget(),
+            StoryWidget(),
             ActHistory(),
             PopularAlbums(),
           ],
@@ -59,21 +60,21 @@ class AboutPage extends StatelessWidget {
   }
 }
 
-class ProfilePicture extends StatelessWidget {
-  const ProfilePicture({super.key});
+// class ProfilePicture extends StatelessWidget {
+//   const ProfilePicture({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      // 圓形頭貼
-      child: ClipOval(
-        child: Image.asset(
-          'assets/aliceko.png',
-          width: 80.0,
-          height: 80.0,
-          fit: BoxFit.cover,
-        ),
-      ),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Center(
+//       // 圓形頭貼
+//       child: ClipOval(
+//         child: Image.asset(
+//           'assets/aliceko.png',
+//           width: 80.0,
+//           height: 80.0,
+//           fit: BoxFit.cover,
+//         ),
+//       ),
+//     );
+//   }
+// }
