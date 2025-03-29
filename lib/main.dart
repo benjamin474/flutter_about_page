@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 
-import 'widgets/act_history.dart';
 import 'widgets/name_widget.dart';
-import 'widgets/popular_albums.dart';
+import 'widgets/popular_series.dart';
 import 'widgets/profile_picture.dart';
 import 'widgets/story_widget.dart';
 
-class Album {
+class Series {
   final String title;
   final String cover;
-  const Album({required this.title, required this.cover});
+  const Series({required this.title, required this.cover});
 }
 
 void main() {
@@ -55,7 +54,7 @@ class AboutPage extends StatelessWidget {
             children: const [
               Stack(
                 children: [
-                  const ProfilePicture(),
+                  ProfilePicture(),
                   Positioned(
                     top: 0,
                     right: 0,
@@ -70,8 +69,7 @@ class AboutPage extends StatelessWidget {
 
              
               NameWidget(),
-              ActHistory(),
-              PopularAlbums(),
+              PopularSeries(),
               StoryWidget(),
             ],
           ),
@@ -80,22 +78,3 @@ class AboutPage extends StatelessWidget {
     );
   }
 }
-
-// class ProfilePicture extends StatelessWidget {
-//   const ProfilePicture({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Center(
-//       // 圓形頭貼
-//       child: ClipOval(
-//         child: Image.asset(
-//           'assets/aliceko.png',
-//           width: 80.0,
-//           height: 80.0,
-//           fit: BoxFit.cover,
-//         ),
-//       ),
-//     );
-//   }
-// }
